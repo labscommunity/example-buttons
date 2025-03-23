@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 200;
+  src: url(/assets/fonts/PlusJakartaSans-ExtraLight.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(/assets/fonts/PlusJakartaSans-Light.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/PlusJakartaSans-Regular.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url(/assets/fonts/PlusJakartaSans-Medium.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(/assets/fonts/PlusJakartaSans-SemiBold.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/assets/fonts/PlusJakartaSans-Bold.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url(/assets/fonts/PlusJakartaSans-ExtraBold.ttf) format('ttf');
+}
+
+* {
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none
+}
+
+::selection {
+  background-color: rgba(171, 154, 255, .6);
+  color: #fff;
+}
+
+:root {
+  --defaultBackgroundColor: white;
+  --defaultTextColor: black;
+}
+
+@media (prefers-color-scheme: dark) {
+:root {
+  --defaultBackgroundColor: white;
+  --defaultTextColor: black;
+}
+}
+
+body {
+  background-color: var(--backgroundColor, var(--defaultBackgroundColor, white));
+  color: var(--textColor, var(--defaultTextColor, black));
+}
+
+body,
+h1,
+button,
+input,
+select,
+textarea {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    letter-spacing: .5px;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  text-align: left;
+}
+
+tr {
+  height: 10vh;
+}
+
+td, th {
+  border-bottom: 1px solid #ddd !important;
+}
+
+.default {
+  border: 2px solid transparent;
+  display: flex;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  width: 100%;
+  min-width: 100px;
+  height: 46px;
+  border-radius: 12px;
+  text-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  gap: 0px;
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  width: 50%;
+} 
+
+.primary {
+  background: linear-gradient(47deg, rgb(88, 66, 248) 5.41%, rgb(107, 87, 249) 96%);
+  color: rgb(255, 255, 255);
+}
+
+.primary:hover {
+  background: rgb(80, 62, 206);
+  border: none;
+}
+
+.secondary {
+  background: rgb(64, 55, 133);
+  color: rgb(238, 238, 238);
+}
+
+.secondary:hover {
+  background: rgb(42, 34, 96);
+  border: none;
+}
