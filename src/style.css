@@ -125,14 +125,18 @@ td, th {
   width: 50%;
 } 
 
+.circle {
+  border-radius: 100%;
+  border: none;
+}
+
 .primary {
-  background: linear-gradient(47deg, rgb(88, 66, 248) 5.41%, rgb(107, 87, 249) 96%);
+  background: rgb(88, 66, 248);
   color: rgb(255, 255, 255);
 }
 
 .primary:hover {
   background: rgb(80, 62, 206);
-  border: none;
 }
 
 .secondary {
@@ -142,5 +146,4 @@ td, th {
 
 .secondary:hover {
   background: rgb(42, 34, 96);
-  border: none;
 }

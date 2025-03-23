@@ -1,0 +1,81 @@
+.default {
+  transition: transform 200ms ease-in-out, background 200ms ease-in-out, box-shadow 200ms ease-in-out;
+}
+
+.default:hover {
+  transform: scale(1.03);
+  box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.15);
+}
+
+.default:active {
+  transform: scale(0.9);
+  box-shadow: none;
+}
+
+.circle {
+  transition: transform 200ms ease-in-out, background 200ms ease-in-out, box-shadow 200ms ease-in-out;
+  /* overflow: hidden; */
+}
+
+.circle svg {
+  pointer-events: none;
+}
+
+.circle:hover {
+  transform: scale(1.03);
+  box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+.circle:active {
+  transform: scale(0.9);
+  box-shadow: none;
+  background: rgb(42, 34, 96);
+}
+
+.primary.default:active {
+  background: rgb(42, 34, 96);
+}
+
+.secondary.default:active {
+  background: rgb(42, 34, 96);
+}
+
+.click {
+  animation: clicking 0.3s ease-out forwards !important;
+}
+
+.circle.click svg {
+  animation: clickingSend .5s ease-in-out forwards !important;
+}
+
+/* This animation makes the button feel springy on click */
+@keyframes clicking {
+  0% {
+    transform: scale(0.9);
+  }
+  40% {
+    transform: scale(1.08);
+  }
+  100% {
+    /* Scale back to the hover state size since user is hovering over button on click */
+    transform: scale(1.03);
+  }
+}
+
+@keyframes clickingSend {
+  0% {
+    transform: translate(0, 0);
+  }
+  39% {
+    transform: translate(30px, -30px) scale(1.5);
+    filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .1));
+  }
+  40% {
+    transform: translate(-30px, 30px) scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
